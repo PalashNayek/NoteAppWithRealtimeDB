@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.palash.noteappwithrealtimedb.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_allNoteFragment"
+            app:destination="@id/allNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.palash.noteappwithrealtimedb.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_allNoteFragment"
+            app:destination="@id/allNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.palash.noteappwithrealtimedb.ui.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_allNoteFragment"
+            app:destination="@id/allNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allNoteFragment"
+        android:name="com.palash.noteappwithrealtimedb.ui.AllNoteFragment"
+        android:label="fragment_all_note"
+        tools:layout="@layout/fragment_all_note" >
+        <action
+            android:id="@+id/action_allNoteFragment_to_addOrUpdateFragment"
+            app:destination="@id/addOrUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOrUpdateFragment"
+        android:name="com.palash.noteappwithrealtimedb.ui.AddOrUpdateFragment"
+        android:label="fragment_add_or_update"
+        tools:layout="@layout/fragment_add_or_update" >
+        <action
+            android:id="@+id/action_addOrUpdateFragment_to_allNoteFragment"
+            app:destination="@id/allNoteFragment" />
+    </fragment>
+</navigation>
